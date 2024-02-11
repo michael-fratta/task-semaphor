@@ -9,7 +9,7 @@ const TaskForm = ({ handleAddTask }) => {
   const [taskData, setTaskData] = useState({
     title: "",
     description: "",
-    deadline: null,
+    deadline: "",
     useDatepicker: false, // track whether to use date picker or not
   });
 
@@ -38,7 +38,7 @@ const TaskForm = ({ handleAddTask }) => {
     setTaskData({
       title: "",
       description: "",
-      deadline: null,
+      deadline: "",
       useDatepicker: false, // reset the useDatepicker state
     });
   };

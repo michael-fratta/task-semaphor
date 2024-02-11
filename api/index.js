@@ -36,12 +36,7 @@ const startServer = async () => {
       console.log(`Server is running on port: ${port}`);
     });
 
-    // Return a function to gracefully shut down the server
-    // this was required for testing to work
-    return () => {
-      console.log("Closing server...");
-      server.close();
-    };
+    return server;
   } catch (error) {
     console.error("Error connecting to MongoDB:", error);
   }
@@ -49,5 +44,4 @@ const startServer = async () => {
 
 startServer();
 
-// Export both app and startServer function
-module.exports = { app, startServer };
+module.exports = app;
