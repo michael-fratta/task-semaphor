@@ -1,0 +1,69 @@
+/* import custom font for app title */
+@font-face {
+  font-family: "ethnocentric";
+  src: local("ethnocentric"), url("./fonts/ethnocentric.otf") format("opentype");
+  font-display: swap;
+}
+
+/* import custom font for app body */
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmWUlfBBc4.woff2)
+    format("woff2");
+}
+
+/* override inherited margins,
+   apply a gray background to the whole body,
+   apply the Roboto font to the whole body */
+body {
+  margin: 0;
+  background-color: gray !important;
+  font-family: "Roboto", sans-serif !important;
+}
+
+/* align everything in the App (body) to the center */
+.App {
+  text-align: center;
+}
+
+/* custom font for app title */
+.AppTitle {
+  font-family: "ethnocentric", sans-serif;
+  color: grey;
+  text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff,
+    1px 1px 0 #fff;
+}
+
+/* set custom font to sub header and TaskForm title too */
+.addATask,
+.usersHeader {
+  font-family: "ethnocentric", "Roboto", "sans-serif";
+  color: black;
+  text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff,
+    1px 1px 0 #fff;
+}
+
+/* set custom font to task list, task title, table head and
+   welcome message too */
+.taskList,
+.taskTitle,
+.tableHead,
+.welcomeMsg {
+  font-family: "ethnocentric", "Roboto", "sans-serif";
+}
+
+/* glow classes for task cards */
+.glow-red {
+  box-shadow: 0 0 20px red;
+}
+
+.glow-amber {
+  box-shadow: 0 0 20px orange;
+}
+
+.glow-green {
+  box-shadow: 0 0 20px lime;
+}
