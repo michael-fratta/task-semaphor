@@ -37,7 +37,9 @@ const LoginRegister = ({ handleLogin, handleRegister }) => {
         data-testid="login-register-card"
       >
         <Card.Body>
-          <Card.Title className="mb-4 mt-2">Login or Register</Card.Title>
+          <Card.Title className="mb-4 mt-2">
+            Login or Register <br /> to get started ...
+          </Card.Title>
           <Form>
             <Form.Group className="mb-3 mx-4" controlId="formBasicUsername">
               <Form.Control
