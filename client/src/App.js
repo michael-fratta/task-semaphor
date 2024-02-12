@@ -334,17 +334,14 @@ function App() {
                 // otherwise show the LoginRegister component
                 // and the welcome message
                 <>
-                  <h2 className="mt-5 mb-5 fs-1 welcomeMsg">
+                  <h2 className="mt-5 mb-3 fs-1 welcomeMsg">
                     Welcome to TaskSemaphor!
                   </h2>
                   <h5
-                    className="mt-3 text-start"
+                    className="m-auto text-start"
                     style={{
                       width: "45rem",
-                      margin: "auto",
-                      alignSelf: "center",
                       color: "yellow",
-                      padding: "1rem",
                     }}
                   >
                     DISCLAIMER: TaskSemaphor is currently a proof of concept & a
