@@ -2,6 +2,8 @@
 import React, { useState } from "react";
 import { Card, Button, Form } from "react-bootstrap";
 import classNames from "classnames"; // conditionally apply CSS class names to an element
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
 
 const Task = ({ task, handleEditTask, handleRemoveTask, userData }) => {
   // keep track of the editing state
@@ -26,6 +28,15 @@ const Task = ({ task, handleEditTask, handleRemoveTask, userData }) => {
     setIsEditing(false);
   };
 
+  // set input deadline date to the state
+  const handleDateChange = (date) => {
+    setUpdatedTask({
+      ...updatedTask,
+      deadline: date,
+    });
+  };
+
+  // define a function to get the glow class
   const getGlowClass = () => {
     if (!task.deadline) return ""; // No glow if no deadline set
 
@@ -33,11 +44,16 @@ const Task = ({ task, handleEditTask, handleRemoveTask, userData }) => {
       (new Date(task.deadline) - new Date()) / (1000 * 60 * 60 * 24)
     );
 
-    if (daysUntilDeadline <= 3) return "glow-red"; // Red glow for 3 days or less
-    if (daysUntilDeadline <= 7) return "glow-amber"; // Amber glow for 7 days or less
-    if (daysUntilDeadline <= 14) return "glow-green"; // Green glow for 14 days or less
-
-    return ""; // No glow if deadline is further than 2 weeks
+    switch (true) {
+      case daysUntilDeadline <= 3:
+        return "glow-red"; // Red glow for 3 days or less
+      case daysUntilDeadline <= 7:
+        return "glow-amber"; // Amber glow for 7 days or less
+      case daysUntilDeadline > 7:
+        return "glow-green"; // Green glow for more than 7 days
+      default:
+        return ""; // No glow if deadline is further than 2 weeks
+    }
   };
 
   // check if the string is a valid date
@@ -94,16 +110,28 @@ const Task = ({ task, handleEditTask, handleRemoveTask, userData }) => {
             </Form.Group>
             <Form.Group className="mb-3">
               <Form.Label>Deadline</Form.Label>
-              <Form.Control
-                type="text"
-                value={updatedTask.deadline}
-                onChange={(e) =>
-                  setUpdatedTask({
-                    ...updatedTask,
-                    deadline: e.target.value,
-                  })
-                }
-              />
+              {/* Conditionally render DatePicker based on deadline type */}
+              {isValidDate(updatedTask.deadline) ? (
+                <DatePicker
+                  selected={updatedTask.deadline}
+                  onChange={handleDateChange}
+                  dateFormat="dd/MM/yyyy"
+                />
+              ) : (
+                <Form.Control
+                  type="text"
+                  name="deadline"
+                  value={updatedTask.deadline}
+                  onChange={(e) =>
+                    setUpdatedTask({
+                      ...updatedTask,
+                      deadline: e.target.value,
+                    })
+                  }
+                  placeholder="Add a deadline (optional)"
+                  className="m-auto w-50"
+                />
+              )}
             </Form.Group>
             <Button
               onClick={handleSaveClick}

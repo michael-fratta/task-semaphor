@@ -59,11 +59,15 @@ body {
 .glow-red {
   box-shadow: 0 0 20px red;
 }
-
 .glow-amber {
   box-shadow: 0 0 20px orange;
 }
-
 .glow-green {
   box-shadow: 0 0 20px lime;
+}
+
+/* datepicker styles */
+.datepicker-input {
+  padding: 0.375rem 0.75rem; /* Adjust padding as needed */
+  border-radius: 0.25rem; /* Apply rounded edges */
 }

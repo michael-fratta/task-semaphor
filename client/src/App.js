@@ -18,7 +18,10 @@ function App() {
   const [tasks, setTasks] = useState([]);
   // the userId is is an empty string if userData is not already present
   const userId = userData ? userData.userId : "";
+
+  // get prefix from environment variable
   const PREFIX = process.env.REACT_APP_API_URL;
+  // use navigate
   const navigate = useNavigate();
 
   // ===========
@@ -310,7 +313,7 @@ function App() {
               {userData ? (
                 <>
                   <TaskForm handleAddTask={handleAddTask} />
-                  <h3 className="taskList bg-dark text-light m-auto p-3 w-75 mb-3 mt-5">
+                  <h3 className="taskList bg-dark text-light m-auto p-2 w-75 mb-3 mt-5">
                     Task List:
                   </h3>
                   {/* render the Filter component if the user is an admin */}
@@ -341,10 +344,7 @@ function App() {
                       margin: "auto",
                       alignSelf: "center",
                       color: "yellow",
-                      border: "1px solid white",
-                      borderRadius: "10px",
                       padding: "1rem",
-                      backgroundColor: "#212529",
                     }}
                   >
                     DISCLAIMER: TaskSemaphor is currently a proof of concept & a
