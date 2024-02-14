@@ -8,7 +8,7 @@ This is a full stack MERN app, which means it is built using MongoDB, Express.js
 
 ## How to use TaskSemaphor
 
-The deployed app (frontend) can be found here:
+The deployed app (frontend) can be found here: https://task-semaphor-frontend.vercel.app/
 
 Login if you already have an account, else register. **Do not use a real email/password.**
 
