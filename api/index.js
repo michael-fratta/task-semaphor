@@ -36,12 +36,8 @@ const startServer = async () => {
       console.log(`Server is running on port: ${port}`);
     });
 
-    // Return a function to gracefully shut down the server
-    // this was required for testing to work
-    return () => {
-      console.log("Closing server...");
-      server.close();
-    };
+    // return server
+    return server;
   } catch (error) {
     console.error("Error connecting to MongoDB:", error);
   }
@@ -49,10 +45,5 @@ const startServer = async () => {
 
 startServer();
 
-// Export app and startServer based on the environment
-if (process.env.NODE_ENV !== "production") {
-  module.exports = { app, startServer };
-} else {
-  // For production (e.g., Vercel), export only app
-  module.exports = app;
-}
+// Export app
+module.exports = app;
