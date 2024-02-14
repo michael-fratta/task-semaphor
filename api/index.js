@@ -49,10 +49,5 @@ const startServer = async () => {
 
 startServer();
 
-// Export app and startServer based on the environment
-if (process.env.NODE_ENV !== "production") {
-  module.exports = { app, startServer };
-} else {
-  // For production (e.g., Vercel), export only app
-  module.exports = app;
-}
+// Export both app and startServer function
+module.exports = { app, startServer };
