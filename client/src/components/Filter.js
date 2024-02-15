@@ -1,18 +1,11 @@
-// DEFINE A FILTER COMPONENT
-import React, { useState } from "react";
+import React from "react";
 import { Form, Dropdown } from "react-bootstrap";
 
-const Filter = ({ setFilter, fetchTasks }) => {
-  const [selectedFilter, setSelectedFilter] = useState("myTasks");
-
-  // define a function to set filters based on the Dropdown selected
+const Filter = ({ selectedFilter, setFilter }) => {
   const handleSelectFilter = (filter) => {
-    setSelectedFilter(filter);
     setFilter(filter);
-    fetchTasks(); // Call fetchTasks directly when a filter is selected
   };
 
-  // render the component
   return (
     <Form>
       <Dropdown>

@@ -318,7 +318,7 @@ function App() {
                   </h3>
                   {/* render the Filter component if the user is an admin */}
                   {userData.isAdmin && (
-                    <Filter setFilter={setFilter} fetchTasks={fetchTasks} />
+                    <Filter selectedFilter={filter} setFilter={setFilter} />
                   )}
                   <TaskList
                     tasks={tasks}
