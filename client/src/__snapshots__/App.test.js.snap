@@ -1,0 +1,119 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App component renders without crashing 1`] = `
+<DocumentFragment>
+  <div
+    class="App"
+  >
+    <nav
+      class="bg-body-tertiary navbar navbar-expand-lg navbar-light"
+    >
+      <div
+        class="container"
+      >
+        <span
+          class="AppTitle fs-1 navbar-brand"
+        >
+          TaskSemaphor
+        </span>
+        <div
+          class="navbar-nav"
+        />
+      </div>
+    </nav>
+    <h2
+      class="mt-5 mb-5 fs-1 welcomeMsg"
+    >
+      Welcome to TaskSemaphor!
+    </h2>
+    <h5
+      class="mt-3 text-start"
+      style="width: 45rem; margin: auto; align-self: center; color: yellow; padding: 1rem;"
+    >
+      DISCLAIMER: TaskSemaphor is currently a proof of concept & a work in progress - in the interest of security, do not use your real email addresses or passwords when registering!
+    </h5>
+    <div>
+      <div
+        class="m-auto text-light mt-4 card bg-dark border-light"
+        data-testid="login-register-card"
+        style="width: 20rem;"
+      >
+        <div
+          class="card-body"
+        >
+          <div
+            class="mb-4 mt-2 card-title h5"
+          >
+            Login or Register
+          </div>
+          <form
+            class=""
+          >
+            <div
+              class="mb-3 mx-4"
+            >
+              <input
+                class="form-control"
+                id="formBasicUsername"
+                name="username"
+                placeholder="Username"
+                required=""
+                type="text"
+                value=""
+              />
+            </div>
+            <div
+              class="mb-3 mx-4"
+            >
+              <input
+                class="form-control"
+                id="formBasicPassword"
+                name="password"
+                placeholder="Password"
+                required=""
+                type="password"
+                value=""
+              />
+            </div>
+            <button
+              class="m-3 btn btn-secondary"
+              type="button"
+            >
+              Login
+            </button>
+            <button
+              class="btn btn-secondary"
+              type="button"
+            >
+              Register
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div
+      class="mt-5 mb-5 text-start fs-5"
+      style="width: 45rem; margin: auto; align-self: center; border: 1px solid white; border-radius: 10px; padding: 1rem; background-color: rgb(33, 37, 41); color: rgb(248, 249, 250);"
+    >
+      <p>
+        TaskSemaphor is a task management app with a straightforward interface designed for easy task addition and management. The name is a blend of the words "tasks" and "semaforo" (Italian for traffic light) - reflecting its unique feature:
+      </p>
+      <p>
+        Tasks, represented as 'cards', glow red, amber, or green based on their deadline to completion. It's also a play on the word "semaphore" - defined as "an apparatus for visual signaling" by Merriam-Webster - with the signalling here being the familiar red, amber, and green warning levels.
+      </p>
+      <p>
+        Please note that TaskSemaphor is currently a proof of concept, and as such security has not been a main focal point for demonstrating the functionality thereof. Do not use your real email address or passwords you use elsewhere when registering. Future updates will enhance security features, allowing you to use your actual email/password combo or log in with Gmail/Facebook/etc.
+      </p>
+      <p>
+        To explore the functionality available to system administrators, log in with the username "admin@example.com" and the password "admin." For regular users, use the username "bob" and password "bob," or register with any username/password combo of your choice. Remember not to use your actual email address or any password used elsewhere.
+      </p>
+      <p>
+        This is a full stack MERN app, which means it is built using MongoDB, Express.js, React.js, and Node.js. MongoDB is used as the database to store task & user information, Express.js handles the backend server logic and routes, React.js manages the frontend user interface, and Node.js powers the backend server environment.
+      </p>
+      <p>
+        Thanks for exploring TaskSemaphor, and I hope you enjoy using the app!
+      </p>
+    </div>
+  </div>
+</DocumentFragment>
+`;
